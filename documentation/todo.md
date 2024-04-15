@@ -1,0 +1,4 @@
+- [ ] sette opp forskjellige pages
+    - [ ] Home
+    - [ ] Forum/boards
+    - [ ] Threads
