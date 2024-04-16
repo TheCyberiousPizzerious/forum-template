@@ -1,18 +1,20 @@
-FROM rust:latest as builder
-
-LABEL maintainer="dontcontactme"
-
+#FROM rust:latest as builder
+#
 #RUN apt update && apt upgrade -y && rm -rf /var/lib/apt/lists/*
-
-ADD ../ /
-
-WORKDIR /forum-backend
+#
+#WORKDIR APP
+#
+#ADD . /APP
+#
+#WORKDIR /forum-backend
 #RUN rm -rf target/*
-RUN cargo build --release
+#RUN cargo build --release
 
 FROM debian:bookworm
 
-COPY --from=builder forum-backend/target/release/forum-backend /usr/src
+CMD ["/bin/bash"]
+
+#COPY --from=builder forum-backend/target/release/forum-backend /usr/src
 
 #WORKDIR /usr/src
 

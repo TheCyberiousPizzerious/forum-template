@@ -4,3 +4,4 @@
 pub mod monitor_models;
 pub mod user_model;
 pub mod post_models;
+pub mod message_model;
