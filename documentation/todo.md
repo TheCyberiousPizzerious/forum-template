@@ -20,6 +20,9 @@
         - [ ] Finne ut hvordan conteinerisere react
     - [ ] Få alle til å snakke sammen
 
+### Til i morgen / WIP
+- [ ] funksjon som gjør json tilbake til sin respektiv datatype
+
 ### Om tid til overs
 - [ ] Kubernetes
     - [ ] sette opp cluster
