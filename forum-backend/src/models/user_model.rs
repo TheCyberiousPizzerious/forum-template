@@ -9,5 +9,6 @@ pub struct User {
     pub username: String,
     pub email: String,
     pub passwordhash: String,
-    pub timestamp: String,
+    pub server_timestamp: String,
+    pub user_timestamp: String,
 }
