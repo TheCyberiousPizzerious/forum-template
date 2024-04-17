@@ -3,61 +3,61 @@ services:
     container_name: backend
     build:
       dockerfile: forum-backend/dockerfile
-    ports:
-      - 7175:7175
-    networks:
-      - mongodb-network
+    #ports:
+    #  - 7175:7175
+    #networks:
+    #  - mongodb-network
 
-  mongodb:
-    image: mongo
-    container_name: mongodb
-    environment:
-      - MONGO_INITDB_ROOT_USERNAME=root
-      - MONGO_INITDB_ROOT_PASSWORD=toor
-    volumes:
-      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
-      - mongodb-data:/data/db
-    networks:
-      - mongodb-network
-    ports:
-      - 27017:27017
-    healthcheck:
-      test: echo 'db.runCommand("ping").ok' | mongo localhost:27017/test --quiet
-      interval: 30s
-      timeout: 10s
-      retries: 3
-    restart: unless-stopped
-
-  mongo-express:
-    image: mongo-express
-    container_name: mongo-express
-    environment:
-      - ME_CONFIG_MONGODB_SERVER=mongodb
-      - ME_CONFIG_MONGODB_ENABLE_ADMIN=true
-      - ME_CONFIG_MONGODB_ADMINUSERNAME=root
-      - ME_CONFIG_MONGODB_ADMINPASSWORD=toor
-      - ME_CONFIG_BASICAUTH_USERNAME=webuser
-      - ME_CONFIG_BASICAUTH_PASSWORD=webpwd
-    #volumes:
-    #  - mongodb-data:/data/db
-    depends_on:
-      - mongodb
-    networks:
-      - mongodb-network
-    ports:
-      #- 8081:8081
-      - "127.0.0.1:8081:8081"
-    healthcheck:
-      test:  wget --quiet --tries=3 --spider http://webuser:webpwd@localhost:8081 || exit 1
-      interval: 30s
-      timeout: 10s
-      retries: 3
-    restart: unless-stopped
-
-volumes:
-  mongodb-data:
-    name: mongodb-data
-
-networks:
-  mongodb-network:
-    name: mongodb-network    
+#  mongodb:
+#    image: mongo
+#    container_name: mongodb
+#    environment:
+#      - MONGO_INITDB_ROOT_USERNAME=root
+#      - MONGO_INITDB_ROOT_PASSWORD=toor
+#    volumes:
+#      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+#      - mongodb-data:/data/db
+#    networks:
+#      - mongodb-network
+#    ports:
+#      - 27017:27017
+#    healthcheck:
+#      test: echo 'db.runCommand("ping").ok' | mongo localhost:27017/test --quiet
+#      interval: 30s
+#      timeout: 10s
+#      retries: 3
+#    restart: unless-stopped
+#
+#  mongo-express:
+#    image: mongo-express
+#    container_name: mongo-express
+#    environment:
+#      - ME_CONFIG_MONGODB_SERVER=mongodb
+#      - ME_CONFIG_MONGODB_ENABLE_ADMIN=true
+#      - ME_CONFIG_MONGODB_ADMINUSERNAME=root
+#      - ME_CONFIG_MONGODB_ADMINPASSWORD=toor
+#      - ME_CONFIG_BASICAUTH_USERNAME=webuser
+#      - ME_CONFIG_BASICAUTH_PASSWORD=webpwd
+#    #volumes:
+#    #  - mongodb-data:/data/db
+#    depends_on:
+#      - mongodb
+#    networks:
+#      - mongodb-network
+#    ports:
+#      #- 8081:8081
+#      - "127.0.0.1:8081:8081"
+#    healthcheck:
+#      test:  wget --quiet --tries=3 --spider http://webuser:webpwd@localhost:8081 || exit 1
+#      interval: 30s
+#      timeout: 10s
+#      retries: 3
+#    restart: unless-stopped
+#
+#volumes:
+#  mongodb-data:
+#    name: mongodb-data
+#
+#networks:
+#  mongodb-network:
+#    name: mongodb-network    

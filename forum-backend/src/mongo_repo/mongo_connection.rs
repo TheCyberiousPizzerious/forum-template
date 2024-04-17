@@ -1,7 +1,7 @@
 use dotenv::dotenv;
 use mongodb::{Client, error::Error};
 use std::env;
-use url_encoder;
+//use url_encoder;
 
 pub async fn establish_connection() -> Result<Client, Error> {
     println!("ESTABLISHING CONNECTION TO MONGODB SERVER");
