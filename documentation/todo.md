@@ -6,8 +6,12 @@
 - [ ] passord
     - [ ] hashe
     - [ ] salte
+- [ ] ordentlig error handeling
+    - [ ] bytte ut alle .unwrap() med match
 
-
+## MongoDB
+- [ ] db.collection.createIndex({"myfield": 1}, {unique: true}) for brukernavn (kanskje)
+ 
 ## Frontend
 - [ ] sette opp forskjellige pages
     - [ ] Home
