@@ -8,6 +8,8 @@
     - [ ] salte
 - [ ] ordentlig error handeling
     - [ ] bytte ut alle .unwrap() med match
+- [ ] Data structurer
+    - [ ] Endre på tilhørighet så bare "sub ting" har hvem som er eieren isteden for at eieren har "sub ting"
 
 ## MongoDB
 - [ ] db.collection.createIndex({"myfield": 1}, {unique: true}) for brukernavn (kanskje)
