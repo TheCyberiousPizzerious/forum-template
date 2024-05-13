@@ -74,15 +74,17 @@ Valg av programmeringsspråk handler om at jeg er kjent med Rust og har brukt en
 Grunnen til at jeg bruker vite og react på frontenden min er at de fleste bedrifter og store steder bruker React så det er bra og kunne. Det har mye bra funksjonalitet vite er enkelt å sette opp så det gjør det lettere å komme i gang.
 
 ## Kode dokumentasjon
-I denne seksjonen skal jeg forklare funksjonalitet i koden min og hvordan koden henger sammen.
+I denne seksjonen skal jeg forklare Hvordan man leser Rust kode og litt overfladisk hva koden gjør. Det samme med frontenden.
 
 ### Frontend
 Frontenden min er skrevet med TypeScript og React. TypeScript er en typecasted version av JavaScript. Altså du må spesifisere typene på vaiabler, om de er tall strenger eller array også videre.
 
 Målet med frontenden er å vise fram ting som jeg legger ut på endepunketene mine. Helt ideelt skal frontendene være utbyttbare og du skal kunne velge mellom hvilke frontend en øsnker å bruke. Denne dokumenatasjonen går over React frontenden.
 
-#### Kode
+React har mye innebygget funksjonalitet og sider fungerer ved at man setter sammen flere mindre komponenter som man finner i "components" mappen. Disse komponentene settes sammen på sidene som kan sees under "pages" mappen. 
 
 ### Backend
 
 #### Kode
+
+>curl -X POST -H "Content-Type: application/json" -d "{\"username\":\"SuperGamer\", \"email\":\"your_email@example.com\", \"passwordhash\":\"your_password\", \"user_timestamp\":\"2024-05-10T09:22:08Z\", \"admin\":false, \"banned\":false}" http://localhost:7175/api/register

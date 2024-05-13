@@ -1,18 +1,17 @@
 ## Backend
-- [ ] Sende og motta requests
+- [x] Sende og motta requests
+- [x] Registrere brukere
+- [ ] Logge inn brukere
 - [ ] Mongodb
-    - [ ] Sette inn til mongodb
+    - [x] Sette inn til mongodb
     - [ ] Få fra mongodb
 - [ ] passord
     - [ ] hashe
     - [ ] salte
 - [ ] ordentlig error handeling
-    - [ ] bytte ut alle .unwrap() med match
-- [ ] Data structurer
-    - [ ] Endre på tilhørighet så bare "sub ting" har hvem som er eieren isteden for at eieren har "sub ting"
-
-## MongoDB
-- [ ] db.collection.createIndex({"myfield": 1}, {unique: true}) for brukernavn (kanskje)
+    - [ ] bytte ut alle .unwrap() med match hvor nødvendig
+- [x] Data structurer
+    - [x] Endre på tilhørighet så bare "sub ting" har hvem som er eieren isteden for at eieren har "sub ting"
  
 ## Frontend
 - [ ] sette opp forskjellige pages
@@ -25,9 +24,10 @@
     - [ ] Skrive dockerfiler
         - [ ] Finne ut hvordan conteinerisere react
     - [ ] Få alle til å snakke sammen
-
-### Til i morgen / WIP
-- [ ] funksjon som gjør json tilbake til sin respektiv datatype
+- [x] Mongodb
+    - [x] installere mognodb
+    - [x] Lage nødvendige collections
+    - [x] Modta og Lagre data
 
 ### Om tid til overs
 - [ ] Kubernetes
