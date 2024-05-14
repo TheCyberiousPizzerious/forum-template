@@ -81,7 +81,7 @@ Frontenden min er skrevet med TypeScript og React. TypeScript er en typecasted v
 
 Målet med frontenden er å vise fram ting som jeg legger ut på endepunketene mine. Helt ideelt skal frontendene være utbyttbare og du skal kunne velge mellom hvilke frontend en øsnker å bruke. Denne dokumenatasjonen går over React frontenden.
 
-React har mye innebygget funksjonalitet og sider fungerer ved at man setter sammen flere mindre komponenter som man finner i "components" mappen. Disse komponentene settes sammen på sidene som kan sees under "pages" mappen. 
+React har mye innebygget funksjonalitet og sider fungerer ved at man setter sammen flere mindre komponenter som man finner i "components" mappen. Disse komponentene settes sammen på sidene som kan sees under "pages" mappen.
 
 ### Backend
 
