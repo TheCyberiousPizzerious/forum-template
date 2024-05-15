@@ -15,10 +15,12 @@
  
 ## Frontend
 - [ ] sette opp forskjellige pages
-    - [ ] Home
+    - [x] Home
     - [ ] Forum/boards
     - [ ] Threads
-
+    - [ ] Admin
+- [ ] Komponenter
+    - [ ] Gjøre om Login og register siden til komponenter
 ## Server
 - [ ] Docker
     - [ ] Skrive dockerfiler
