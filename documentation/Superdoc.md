@@ -13,8 +13,11 @@ Trygve A. Hareide, SomethingForum, 2024
 
     - [Hvordan](#hvordan)
     - [Hvorfor](#hvorfor)
-    - [Kode dokumentasjon](#kode-dokumentasjon)
-        - [Frontend](#frontend)
+    - [Teknisk dokumentasjon](#teknisk-dokumentasjon)
+    - [Lovverk](#lovverk)
+    - [Risiko og tiltak](#risiko-og-tiltak)
+    - [Egenevaluering](#egenevaluering)
+    - [Curl kommandoer](#curl-kommandoer)
 
 
 ## For lærlinger
@@ -149,6 +152,10 @@ Peronsolig tenker jeg at disse er vage og vanskelig å få til om dette ikke er 
 
 Konsekvensene for å ikke følge Uu reglene er merkelige det kan være daglige bøter, engangsbøter, IKT-tilsynet git veiledning og annet. 
 
+### Opphavsrett
+
+Opphavsrett er et viktig juridisk konsept som beskytter skapernes rettigheter til deres originale verk, inkludert nettsider. Når du lager en nettside, er det viktig å respektere opphavsretten ved ikke å bruke beskyttet materiale uten tillatelse. Dette kan inkludere tekst, bilder, videoer, musikk og mer. Brudd på opphavsretten kan føre til alvorlige juridiske konsekvenser, inkludert bøter og potensielle søksmål. I tillegg bidrar respekt for opphavsretten til å fremme kreativitet og innovasjon ved å sikre at skapere får anerkjennelse og kompensasjon for deres arbeid. Derfor er det viktig å alltid søke tillatelse, gi kreditt, og følge lisensavtaler når du bruker andres verk på din nettside.
+
 ## Risiko og tiltak
 
 Det er mange risikoer og problemer som kommer med å hoste og drive nettforum. Her er noen jeg tenker er realistiske, det er vannskelig å lage et risikodiagram i markdown så vi tar det punkt for punkt eller risiko for risiko.
@@ -269,7 +276,6 @@ For å håndtere programvareutfordringer, bør organisasjoner sørge for at all 
 ## Egenevaluering
 Her skal jeg gjøre noe jeg liker som er å reflektere
 ### Utfordringer jeg har møtt
-
 #### Sette opp Tailwind Css
 En av de verste opplevelsene mine har vært å sette opp Tailwind Css. Jeg måtte endre på noen av boilerplate filene som styrer tailwind css.
 
@@ -291,18 +297,28 @@ Jeg hadde mange problemer med å velge prosjektet mitt, jeg hadde nemlig planlag
 Jeg har brukt Actix web litt tidligere, så jeg ville prøve å lage noe med det. Det viste seg at API med Rust ikke er noe serlig.
 
 ### Hva har jeg lært
+Jeg har lært at jeg aldri skal bruke Rust som api språk. Det er viktig å velge en oppgave og holde seg til det. Jeg har lært mye om hvordan Rust fungerer og bruksomerådene til Rust.
+
+React er et ganske bra alternativ til standard html, css og javascript. Typescript som ligner andre språk er bedre enn javascript. Det å lage komponenter ovenfor å bare lager sider.
 
 ### Hvordan vurderer du selv arbeidet du har gjort
+Jeg har vært ganske aktiv, men jobber litt uoraginsert en gang i blant. Det ble en oppgave til slutt, resultatet var ok men jeg lærte mye.
+
+Jeg lærte mye nyttig som jeg kan ta med meg videre i jobblivet.
 
 ### Hva burde være gjort annerledes
+Holdt meg til en oppgave og bruke mer tid på oppgaven med et annet språk som einet seg mer til oppgaven.
+
+Fokusert mer på frontenden siden det ikke var så vanskelig som jeg trodde det skulle være. 
 
 ## Curl kommandoer
 Om frontenden min ikke snakker ordentlig sammen med backenden min så er dette noen Curl commandoer du kan bruke for å kontakte apien min alikevel. 
 
-
 Arial 11ptk eller times new roman 12 pkt linjheavstand1.5
 
->curl -X POST -H "Content-Type: application/json" -d "{\"username\":\"SuperGamer\", \"email\":\"your_email@example.com\", \"passwordhash\":\"your_password\", \"user_timestamp\":\"2024-05-10T09:22:08Z\", \"admin\":false, \"banned\":false}" http://localhost:7175/api/register
+curl http://localhost:7175/api/getAllUsers
+
+curl -X POST -H "Content-Type: application/json" -d "{\"username\":\"SuperGamer\", \"email\":\"your_email@example.com\", \"passwordhash\":\"your_password\", \"user_timestamp\":\"2024-05-10T09:22:08Z\", \"admin\":false, \"banned\":false}" http://localhost:7175/api/register
 
 ## Kilder
 https://www.uutilsynet.no/veiledning/losningsforslag-krav/1366
