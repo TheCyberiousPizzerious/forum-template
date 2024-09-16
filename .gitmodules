@@ -1,6 +1,0 @@
-[submodule "forum-backend"]
-	path = forum-backend
-	url = https://github.com/TheCyberiousPizzerious/forum-backend
-[submodule "forum-vite-frontend"]
-	path = forum-vite-frontend
-	url = https://github.com/TheCyberiousPizzerious/forum-vite-frontend
